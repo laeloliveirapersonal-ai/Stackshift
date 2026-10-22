@@ -31,6 +31,21 @@ jobs:
           npx cap add android
           npx cap sync android
 
+      - name: Ícone do app
+        run: |
+          if [ -f icon.png ]; then
+            sudo apt-get install -y imagemagick > /dev/null
+            rm -rf android/app/src/main/res/mipmap-anydpi-v26
+            for d in mdpi:48 hdpi:72 xhdpi:96 xxhdpi:144 xxxhdpi:192; do
+              n=${d%%:*}; z=${d##*:}
+              for f in ic_launcher ic_launcher_round; do
+                convert icon.png -resize ${z}x${z} android/app/src/main/res/mipmap-$n/$f.png
+              done
+            done
+          else
+            echo "::warning::icon.png não encontrado; usando o ícone padrão"
+          fi
+
       - name: Orientação retrato
         run: |
           sed -i 's/<activity /<activity android:screenOrientation="portrait" /' android/app/src/main/AndroidManifest.xml
