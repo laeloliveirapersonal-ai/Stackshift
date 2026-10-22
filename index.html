@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Stack Shift: A Última Entrega</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body><div id="wrap"><div id="game">
+<canvas id="c"></canvas>
+<div id="hud"><div class="pill">METROS <span id="height">0</span></div><div class="pill">RECORDE <span id="best">0</span></div><div class="pill">🪙 <span id="coins">0</span></div></div>
+<div id="hint">DESLIZE para mover · ◀ ▶ no computador</div>
+<button id="pause" aria-label="Pausar">⏸</button><button id="mute" aria-label="Som">🔊</button>
+<div id="controls"><button class="ctrl" id="left" aria-label="Mover para esquerda">◀</button><button class="ctrl" id="right" aria-label="Mover para direita">▶</button></div>
+<div id="acts"><button class="act" id="bJet" aria-label="Jato"><img data-i="i_jet"><span class="cd"></span></button><button class="act" id="bMis" aria-label="Míssil"><img data-i="i_mis"><b class="bd" id="mc">0</b></button></div>
+<div id="cpi"><img data-i="i_chk"><b class="bd">1</b></div>
+<div id="intro"><img class="pic" id="ipic" alt=""><div class="cap" id="icap"></div><div id="dots"></div><button class="action" id="inext" style="max-width:280px">PRÓXIMO</button><div id="choice"><button class="action" id="cCont" style="background:linear-gradient(#e0452c,#8a1d0e);border-color:#ff9d8a">CONTINUAR: EXPLORAR OUTRAS CIDADES</button><button class="action" id="cVolta" style="background:linear-gradient(#2a8fd8,#144a7a);border-color:#8fd0ff">VOLTAR: ENCERRAR A MISSÃO</button></div><button id="skip">Pular história</button></div>
+<div id="shop"><div class="card"><h2>🔋 PONTO DE RECARGA</h2><div class="th">🪙 <span id="scoins">0</span> moedas</div><div id="slist" style="touch-action:pan-y"></div><button class="action" id="sclose">CONTINUAR SUBINDO</button></div></div><div id="tbanner"></div><div id="tro"><div class="card"><h2>🏆 TROFÉUS</h2><div id="tlist"></div><button class="action" id="tclose">FECHAR</button></div></div>
+<div id="overlay"><img id="cover" src="assets/img/cover.webp" alt="Stack Shift"><div id="coinbar">🪙 <b id="mcoins">0</b></div><div id="mtop"><button class="ib" id="msound"><img src="assets/ui/ic_sound.webp" alt="Som"></button><button class="ib" id="helpBtn"><img src="assets/ui/ic_help.webp" alt="Missões"></button></div><div id="res" class="card"><h2 id="subtitle">A ÚLTIMA ENTREGA</h2><p class="sub" id="message">As botas do Projeto Ascensão pulam sozinhas. Mova Caio para os lados e suba pelas caixas. Colete ⭐ memórias, 🛡️ proteção de queda e 🚀 impulso.</p><div id="missions" class="sub" style="text-align:left;background:#0006;border-radius:10px;padding:9px 11px;margin:0"></div></div><div id="menu"><button class="mb" id="cont" style="display:none"><img src="assets/ui/continuar.webp" alt="Continuar"></button><button class="mb" id="start"><img src="assets/ui/jogar.webp" alt="Jogar"></button><button class="mb" id="story"><img src="assets/ui/capitulos.webp" alt="Capítulos"></button><button class="mb" id="tbtn"><img src="assets/ui/recordes.webp" alt="Recordes"></button><button class="mb" id="tcfg"><img src="assets/ui/config.webp" alt="Configurações"></button></div></div>
+<div id="settings"><div class="card"><h2>⚙️ CONFIGURAÇÕES</h2><button class="action" id="setSound"></button><button class="action" id="setReset" style="background:linear-gradient(#c0392b,#7b1d12);border-color:#ff9d8a">🗑️ APAGAR PROGRESSO</button><button class="action" id="setClose" style="background:linear-gradient(#556,#223);border-color:#99a">FECHAR</button></div></div>
+</div></div>
+<script src="game.js"></script>
+</body></html>
